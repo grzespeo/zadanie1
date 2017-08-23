@@ -1,0 +1,7 @@
+mysql -u root -p
+
+CREATE DATABASE users_db;
+use users_db;
+CREATE TABLE admin( user_id INT NOT NULL AUTO_INCREMENT, username VARCHAR(100) NOT NULL, passcode VARCHAR(40) NOT NULL, submission_date DATE, PRIMARY KEY ( user_id ));
+INSERT INTO admin ( username, passcode )VALUES ( 'test','test' );
+GRANT ALL ON *.* to root@'0.0.0.0' IDENTIFIED BY 'Rekrutacja';
